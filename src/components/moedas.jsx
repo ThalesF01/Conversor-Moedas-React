@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import Button from './button'
+import Conversao from './conversao'
 import '../css/moedas.css'
 
 export default function Moedas() {
@@ -12,26 +12,35 @@ export default function Moedas() {
         <div>
             <div className="Moedas">
                 <div className="conversora moeda">
-                    <p>Selecione a moeda e o valor: </p>
+                    <p>Converter de: </p>
                     <select value={moeda1} onChange={(e)=>setMoeda1(e.target.value)}>
-                        <option value="Real">R$Real</option>
-                        <option value="Dolar">$Dolar</option>
-                        <option value="Euro">€Euro</option>
+                        <option value="Real">Real (BRL)</option>
+                        <option value="Dolar">Dolar Americano (USD)</option>
+                        <option value="Euro">Euro (EUR)</option>
+                        <option value="Libra">Libra Esterlina (GBP)</option>
                     </select>
 
-                    <input type="number" placeholder="Valor..." onChange={(e)=>setValor(e.target.value)}></input>
+                    
                 </div>
 
                 <div className="convertida moeda">
-                    <p>Selecione a moeda: </p>
+                    <p>Para: </p>
                     <select value={moeda2} onChange={(e)=>setMoeda2(e.target.value)}>
-                        <option value="Real">R$Real</option>
-                        <option value="Dolar">$Dolar</option>
-                        <option value="Euro">€Euro</option>                       
+                        <option value="Real">Real (BRL)</option>
+                        <option value="Dolar">Dólar Americano (USD)</option>
+                        <option value="Euro">Euro (EUR)</option>                       
+                        <option value="Libra">Libra Esterlina (GBP)</option>
                     </select>
                 </div>
+
+                <div className="valor">
+                    <p>Valor:</p>
+                    <input type="number" placeholder="10,00" onChange={(e)=>setValor(e.target.value)}></input>
+                </div>
+
             </div>
-        <Button moeda1={moeda1} moeda2={moeda2} valor={valor}/>
+            
+        <Conversao moeda1={moeda1} moeda2={moeda2} valor={valor}/>
     </div>
     )
 }

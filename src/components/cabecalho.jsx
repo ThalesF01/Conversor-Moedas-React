@@ -5,9 +5,8 @@ import '../css/cabecalho.css'
 export default function cabecalho(){
     return (
         <div className='cabeçalho'>
-            <h1>Conversor Digital de Moedas</h1>
-            
-            <p>Feito em base de conversão do dia 06/07/2021</p>
+            <h1>Conversor Digital de Moedas</h1>            
+            <p>Data cotação utilizada: 12/07/2021</p>
             <Relogio />
         </div>
     )
