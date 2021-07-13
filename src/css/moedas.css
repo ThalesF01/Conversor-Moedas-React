@@ -1,0 +1,38 @@
+.Moedas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.moeda{
+    background: linear-gradient(to right,rgb(197 222 222),rgb(115 207 222));  
+    height: 20vh;
+    font-size: 1.3rem;
+    padding: 35px;
+    padding-top:24px ;
+    border-radius: 17px;
+    width: 350px;
+}
+
+.moeda select{
+    border: 0;
+    font-size: 1.2rem;
+    padding: 3px;
+    border-radius: 5px;
+    
+}
+
+.conversora input{
+    outline: none;
+    border: none;
+    font-size:1.3rem;
+    margin: 5px;
+    width: 50%;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.convertida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

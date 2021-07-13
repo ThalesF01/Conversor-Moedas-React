@@ -1,0 +1,14 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right,rgb(209, 191, 191),rgb(54, 223, 194));
+}
+
+.container{
+    height: 100vh;
+}
