@@ -21,6 +21,11 @@
 
 @media (max-width:740px) {
     .HistMoeda{
-        width: 75%;
+        width: 80%;
+    }
+
+    .HistMoeda p{
+        padding: 10px;
+        line-height: 35px;
     }
 }
