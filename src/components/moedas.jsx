@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
-import Conversao from './conversao'
+import Resultado from './resultado'
 import '../css/moedas.css'
+import HistMoeda from './histMoeda'
 
 export default function Moedas() {
 
@@ -9,7 +10,7 @@ export default function Moedas() {
     const [moeda2,setMoeda2] = useState('Dolar')
     
     return(
-        <div>
+        <>
             <div className="Moedas">
                 <div className="conversora moeda">
                     <p>Converter de: </p>
@@ -37,7 +38,8 @@ export default function Moedas() {
                 </div>
             </div>
             
-        <Conversao moeda1={moeda1} moeda2={moeda2} valor={valor}/>
-    </div>
+        <Resultado moeda1={moeda1} moeda2={moeda2} valor={valor}/>
+        <HistMoeda moeda={moeda1}/>
+    </>
     )
 }

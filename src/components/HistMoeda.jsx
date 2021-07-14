@@ -3,10 +3,13 @@ import '../css/hist.css'
 
 export default function HistMoeda(props) {
 
-    function Hist(moeda){
-        if(moeda === 'Real'){ 
+    var fonte
+
+    function Hist(){
+        if(props.moeda === 'Real'){ 
+            fonte = 'https://pt.wikipedia.org/wiki/Real_(moeda_brasileira)'
             return <>
-                <h1>{props.moeda}</h1>
+                <div className='img'><h1>{props.moeda}</h1> <img alt='Simbolo'src="https://image.flaticon.com/icons/png/512/38/38213.png"/></div>
                 <p>O Real (ISO 4217: BRL, abreviado como R$) é a moeda corrente oficial da 
                     República Federativa do Brasil. Após sucessivas trocas monetárias, o Brasil 
                     adotou o real em 1 de julho de 1994, que, aliado à drástica queda das taxas de 
@@ -18,18 +21,20 @@ export default function HistMoeda(props) {
                     candidatar a Presidente da República.</p>
              </>
         }
-        else if(moeda === 'Dolar'){
+        else if(props.moeda === 'Dolar'){
+            fonte = 'https://pt.wikipedia.org/wiki/D%C3%B3lar_dos_Estados_Unidos'
             return <>
-                <h1>{props.moeda}</h1>
+                <div className='img'><h1>{props.moeda}</h1> <img alt='Simbolo'src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Dollar_Sign.svg/1200px-Dollar_Sign.svg.png"/></div>
                 <p>O dólar dos Estados Unidos (em inglês: United States dollar), também conhecido como dólar 
                     estadunidense ou dólar americano é a moeda oficial dos Estados Unidos e utilizada no mundo inteiro, 
                     tanto em reservas internacionais, como em livre circulação em alguns países. Atualmente, sua expedição 
                     é controlada pela Reserva Federal dos Estados Unidos.</p>
              </>
         }
-        else if(moeda === 'Euro'){
+        else if(props.moeda === 'Euro'){
+            fonte = 'https://pt.wikipedia.org/wiki/Euro'
             return <>
-                <h1>{props.moeda}</h1>
+                <div className='img'><h1>{props.moeda}</h1> <img alt='Simbolo'src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Euro_symbol_black.svg/764px-Euro_symbol_black.svg.png"/></div>
                 <p>Euro (símbolo: €; código: EUR) é a moeda oficial da zona Euro, a qual é constituída por 19 dos 27 
                     estados-membro da União Europeia: Alemanha, Áustria, Bélgica, Chipre, Eslováquia, Eslovénia, Espanha, 
                     Estónia, Finlândia, França, Grécia, Irlanda, Itália, Letónia, Lituânia, Luxemburgo, Malta, Países Baixos 
@@ -39,9 +44,10 @@ export default function HistMoeda(props) {
                     territórios ultramarinos da UE.</p>
             </>
         }
-        else if(moeda === 'Libra'){
+        else if(props.moeda === 'Libra'){
+            fonte = 'https://pt.wikipedia.org/wiki/Libra_esterlina'
             return <>
-            <h1>{props.moeda}</h1>
+            <div className='img'><h1>{props.moeda}</h1> <img alt='Simbolo'src="https://image.flaticon.com/icons/png/512/20/20977.png"/></div>
                 <p>A libra esterlina ou simplesmente libra (em inglês, pound, plural pounds, informal. Pound Sterling, 
                     ou pounds sterling, formal) é a moeda oficial do Reino Unido. Desde 15 de Fevereiro de 1971 e da 
                     adoção do sistema decimal, ela é dividida em 100 pence (singular: penny). Antes dessa data, uma libra 
@@ -53,8 +59,12 @@ export default function HistMoeda(props) {
     }
 
     return(
-        <div className="HistMoeda">
-            {Hist(props.moeda)}
-        </div>
+            <div className="HistMoeda">
+                {Hist()}
+
+                <div className="fonte">
+                    <p>Fonte:<a href={fonte} rel="noreferrer" target="_blank">Wikipedia</a></p>
+                </div>
+            </div>
     )
 }

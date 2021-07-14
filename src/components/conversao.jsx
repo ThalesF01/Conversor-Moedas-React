@@ -1,8 +1,6 @@
 import React from 'react'
-import '../css/conversao.css'
-import HistMoeda from './HistMoeda'
 
-export default function button(props){
+export default function conversao(props){
 
     var resultado = 0
     var conversao1 = 0
@@ -88,18 +86,9 @@ export default function button(props){
     }
 
     return(
-        <div>
-            <h2 className="p-res">Resultado da Conversão :</h2>
+        <>
             {Calculator()}
-            <div className="box">
-                <p>Resultado: {resultado.toFixed(2)}</p>
-                <div className="config">
-                    <span>Conversao de {props.moeda1} para {props.moeda2}</span>
-                    <span>1 {props.moeda1} = {conversao1} {props.moeda2} </span>
-                    <span>1 {props.moeda2} = {conversao2} {props.moeda1}</span>
-                </div>
-            </div>  
-            <HistMoeda moeda={props.moeda1}/>
-        </div>
+            {resultado.toFixed(2)}
+        </>
     )
 }
