@@ -1,0 +1,26 @@
+.HistMoeda{
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7cc;
+    margin: auto;
+    margin-top: 35px;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.HistMoeda p{
+    line-height: 30px;
+    font-size: 1.3rem;
+}
+
+.HistMoeda h1{
+    text-decoration: underline;
+}
+
+@media (max-width:740px) {
+    .HistMoeda{
+        width: 75%;
+    }
+}

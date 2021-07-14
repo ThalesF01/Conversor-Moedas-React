@@ -19,8 +19,6 @@ export default function Moedas() {
                         <option value="Euro">Euro (EUR)</option>
                         <option value="Libra">Libra Esterlina (GBP)</option>
                     </select>
-
-                    
                 </div>
 
                 <div className="convertida moeda">
@@ -37,7 +35,6 @@ export default function Moedas() {
                     <p>Valor:</p>
                     <input type="number" placeholder="10,00" onChange={(e)=>setValor(e.target.value)}></input>
                 </div>
-
             </div>
             
         <Conversao moeda1={moeda1} moeda2={moeda2} valor={valor}/>

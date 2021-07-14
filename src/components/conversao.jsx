@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/conversao.css'
+import HistMoeda from './HistMoeda'
 
 export default function button(props){
 
@@ -11,7 +12,7 @@ export default function button(props){
                             ////* REAL *////
 
         if (props.moeda1 === 'Real' && props.moeda2 === 'Dolar'){
-            conversao1 = 0.20
+            conversao1 = 0.19
             conversao2 = 5
             resultado = props.valor * conversao1
         }
@@ -30,7 +31,7 @@ export default function button(props){
 
         else if(props.moeda1 === 'Dolar' && props.moeda2 === 'Real'){ 
             conversao1 = 5
-            conversao2 = 0.20
+            conversao2 = 0.19
             resultado = props.valor * conversao1
         }
         else if(props.moeda1 === 'Dolar' && props.moeda2 === 'Euro'){ 
@@ -80,7 +81,6 @@ export default function button(props){
             resultado = props.valor * conversao1
         }
 
-
         else if(props.moeda1 === props.moeda2){ 
             conversao1 = 1
             resultado = props.valor * conversao1     
@@ -98,7 +98,8 @@ export default function button(props){
                     <span>1 {props.moeda1} = {conversao1} {props.moeda2} </span>
                     <span>1 {props.moeda2} = {conversao2} {props.moeda1}</span>
                 </div>
-            </div>
+            </div>  
+            <HistMoeda moeda={props.moeda1}/>
         </div>
     )
 }

@@ -38,11 +38,36 @@
     font-family: Cormorant;
 }
 
-@media(max-width:740px){
+
+@media(max-width:750px){
     .box{
         display: flex;
         flex-direction: column;
         width: 65%;
+        height: 380px;
+    }
+
+    .box p{
+       font-size: 1.4rem;
+       text-align: center;
+       height: 60px;
+    }
+
+    .box .config span{
+        font-size: 1.3rem;
+    }
+
+    .p-res{
+        text-align: center;
+        margin-left:0 ;
+    }
+}
+
+@media(max-width:460px){
+    .box{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
         height: 380px;
     }
 

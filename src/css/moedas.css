@@ -30,18 +30,37 @@
     font-size: 1.4rem;
 }
 
-@media(max-width:880px){
+@media(max-width:960px){
     .Moedas select, .valor input{
         width: 195px;
         font-size: 1rem;
     }
 }
 
-@media(max-width:740px){
+
+@media(max-width:840px){
     .Moedas{
         display: flex;
         flex-direction: column;
         width: 65%;
+        height: 380px;
+    }
+
+    .moeda,.valor{
+        margin: 20px;
+    }
+
+    .Moedas select, .valor input{
+        width: 100%;
+    }
+
+}
+
+@media(max-width:460px){
+    .Moedas{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
         height: 380px;
     }
 
