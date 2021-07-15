@@ -19,6 +19,7 @@ export default function Moedas() {
                         <option value="Dolar">Dolar Americano (USD)</option>
                         <option value="Euro">Euro (EUR)</option>
                         <option value="Libra">Libra Esterlina (GBP)</option>
+                        <option value="Bitcoin">Bitcoin (BTC)</option>
                     </select>
                 </div>
 
@@ -29,6 +30,7 @@ export default function Moedas() {
                         <option value="Dolar">Dólar Americano (USD)</option>
                         <option value="Euro">Euro (EUR)</option>                       
                         <option value="Libra">Libra Esterlina (GBP)</option>
+                        <option value="Bitcoin">Bitcoin (BTC)</option>
                     </select>
                 </div>
 

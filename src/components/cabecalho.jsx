@@ -1,5 +1,5 @@
 import React from 'react'
-import Relogio from './relogio'
+import Relogio from './logica/relogio'
 import '../css/cabecalho.css'
 
 export default function cabecalho(){

@@ -1,13 +1,15 @@
-.HistMoeda{
+.box-hist{
     display: flex;
-    flex-direction: column;
-    background-color: #f7f7f7cc;
-    margin: auto;
+    justify-content: center;
     margin-top: 35px;
+}
+
+.HistMoeda{
+    background-color: #f7f7f7cc;   
     border-radius: 15px;
     padding: 20px;
     width: 90%;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 .HistMoeda p{

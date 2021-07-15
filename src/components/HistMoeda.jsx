@@ -56,9 +56,22 @@ export default function HistMoeda(props) {
                     (século X). Originalmente, esse valor correspondia a uma libra de prata.</p>
             </>
         }
+        else if(props.moeda === 'Bitcoin'){
+            fonte = 'https://pt.wikipedia.org/wiki/Bitcoin'
+            return <>
+            <div className='img'><h1>{props.moeda}</h1> <img alt='Simbolo'src="https://image.flaticon.com/icons/png/512/25/25180.png"/></div>
+                <p>Bitcoin (símbolo: ₿; abrev ISO 4217: BTC ou XBT) é uma criptomoeda descentralizada, sendo um dinheiro eletrônico 
+                    para transações ponto-a-ponto. O primeiro artigo descrevendo uma implementação do Bitcoin foi criado em 
+                    2008 sendo apresentado no começo de 2009 a lista de discussão The Cryptography Mailing por um 
+                    programador ou grupo de programadores sob o pseudônimo Satoshi Nakamoto. Bitcoin é considerada a 
+                    primeira moeda digital mundial descentralizada, constituindo um sistema econômico alternativo, e responsável 
+                    pelo ressurgimento do sistema bancário livre.</p>
+            </>
+        }
     }
 
     return(
+        <div className="box-hist">
             <div className="HistMoeda">
                 {Hist()}
 
@@ -66,5 +79,6 @@ export default function HistMoeda(props) {
                     <p>Fonte:<a href={fonte} rel="noreferrer" target="_blank">Wikipedia</a></p>
                 </div>
             </div>
+        </div>
     )
 }
